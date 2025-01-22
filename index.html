@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قارئ النصوص العربي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>قارئ النصوص العربي</h1>
+        
+        <div class="controls">
+            <div class="voice-selection">
+                <label for="voice-type">اختر نوع الصوت:</label>
+                <select id="voice-type">
+                    <option value="male">ذكر</option>
+                    <option value="female">أنثى</option>
+                    <option value="custom">مخصص</option>
+                </select>
+            </div>
+
+            <div class="custom-voice" id="custom-voice-section" style="display: none;">
+                <label>تسجيل صوت مخصص (60 ثانية):</label>
+                <button id="record-btn">بدء التسجيل</button>
+                <div id="recording-status">00:00</div>
+            </div>
+
+            <div class="file-upload">
+                <label for="file-input">رفع ملف نصي أو وورد:</label>
+                <input type="file" id="file-input" accept=".txt,.docx">
+            </div>
+
+            <textarea id="text-input" placeholder="أدخل النص هنا..."></textarea>
+
+            <div class="action-buttons">
+            <button id="generate-btn">توليد الصوت</button>
+            <button id="read-btn">قراءة النص</button>
+            <button id="download-btn" disabled>تحميل الصوت</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
