@@ -3,8 +3,9 @@ const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || 'sk-c3bc7b48f9854f3289d3a708e1852ffe';
+const HOST = process.env.HOST || 'localhost';
 
 // Configure CORS to allow requests from file:// protocol
 app.use(cors({
